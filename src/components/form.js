@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import emailjs from '@emailjs/browser'
-import Swal from 'sweetalert2' // Utilisation de SweetAlert
+import Swal from 'sweetalert2'
 
 const Form = () => {
   const [contactObj, setContactObj] = useState({
@@ -8,23 +8,21 @@ const Form = () => {
     email: '',
     msg: ''
   })
-  const [loading, setLoading] = useState(false)
 
   const [errors, setErrors] = useState({})
+  const [loading, setLoading] = useState(false)
 
   const validate = () => {
     const errs = {}
-    if (!contactObj.fullName || !contactObj.fullName.trim()) {
+    if (!contactObj.fullName.trim()) {
       errs.fullName = 'Nom requis'
     }
-
-    if (!contactObj.email || !contactObj.email.trim()) {
+    if (!contactObj.email.trim()) {
       errs.email = 'Email requis'
     } else if (!/\S+@\S+\.\S+/.test(contactObj.email)) {
       errs.email = 'Email invalide'
     }
-
-    if (!contactObj.msg || !contactObj.msg.trim()) {
+    if (!contactObj.msg.trim()) {
       errs.message = 'Message requis'
     }
 
@@ -36,23 +34,24 @@ const Form = () => {
     e.preventDefault()
     if (!validate()) return
 
+    setLoading(true)
+
     const templateParams = {
       fullName: contactObj.fullName,
       email: contactObj.email,
       message: contactObj.msg
     }
 
-    emailjs.send(
-      'service_amomez8', // Remplace avec ton vrai ID EmailJS
-      'template_0vsru2b', // Remplace avec ton template ID EmailJS
-      templateParams,
-      'pP81AA7gWZksgCVK8' // Ton public key
-    )
-    setLoading(true)
+    emailjs
+      .send(
+        'service_amomez8',
+        'template_0vsru2b',
+        templateParams,
+        'pP81AA7gWZksgCVK8'
+      )
       .then(() => {
-        setErrors({})
         setContactObj({ fullName: '', email: '', msg: '' })
-
+        setErrors({})
         Swal.fire({
           icon: 'success',
           title: 'Message envoyé !',
@@ -67,7 +66,9 @@ const Form = () => {
           text: 'Une erreur est survenue lors de l’envoi.'
         })
       })
-    setLoading(false)
+      .finally(() => {
+        setLoading(false)
+      })
   }
 
   return (
