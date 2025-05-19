@@ -4,15 +4,8 @@ BM Delivery est une application web de livraison moderne, conçue avec React et 
 
 ## 🔗 Démo
 
-👉 [Voir la démo en ligne](https://ton-lien-de-demo.vercel.app)
+👉 [Voir la démo en ligne](delivery-qatuifhj6-derouiche-aymens-projects.vercel.app)
 
-> *Remplace ce lien par l’URL réelle une fois le site déployé.*
-
-## 📸 Aperçu
-
-![Aperçu du site](./screenshot.jpg)
-
-> *Ajoute une capture d’écran de ton site dans le dossier racine et nomme-la `screenshot.jpg`, ou change le nom ici.*
 
 ## 🛠️ Technologies utilisées
 
