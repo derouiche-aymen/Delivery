@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+.card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+
+}
 
 body {
   margin: 0;
@@ -11,6 +17,48 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Inputs / textarea */
+body.dark-mode .form-control {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border-color: #444;
+}
+
+/* Placeholder aussi en blanc/gris */
+body.dark-mode .form-control::placeholder {
+  color: #cccccc;
+}
+
+/* Navbar */
+body.dark-mode .navbar {
+  background-color: #1f1f1f !important;
+}
+
+/* Boutons */
+body.dark-mode .btn {
+  background-color: #333;
+  color: white;
+  border-color: #555;
+}
+
+/* Lien clairs */
+body.dark-mode a {
+  color: #bb86fc;
+}
+
+/* Footer (si tu en as un) */
+body.dark-mode footer {
+  background-color: #1f1f1f;
+  color: white;
+}
+
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

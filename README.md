@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# 🚚 BM Delivery
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+BM Delivery est une application web de livraison moderne, conçue avec React et Bootstrap. Elle permet aux utilisateurs de contacter facilement l’entreprise, consulter les avis clients, et profiter d’une interface claire ou sombre grâce au mode dark mode.
 
-## Available Scripts
+## 🔗 Démo
 
-In the project directory, you can run:
+👉 [Voir la démo en ligne](https://ton-lien-de-demo.vercel.app)
 
-### `npm start`
+> *Remplace ce lien par l’URL réelle une fois le site déployé.*
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📸 Aperçu
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Aperçu du site](./screenshot.jpg)
 
-### `npm test`
+> *Ajoute une capture d’écran de ton site dans le dossier racine et nomme-la `screenshot.jpg`, ou change le nom ici.*
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Technologies utilisées
 
-### `npm run build`
+- ⚛️ React.js
+- 🎨 Bootstrap 5
+- 💌 EmailJS (formulaire de contact)
+- 💬 SweetAlert2 (alertes modernes)
+- 🌙 Mode Sombre (Dark Mode toggle)
+- 👤 UI Avatars (photos d’avis clients)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ✨ Fonctionnalités
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- ✅ Formulaire de contact fonctionnel avec EmailJS
+- ⭐ Section "Avis Clients" avec avatars générés automatiquement
+- 🌗 Mode clair / sombre activable
+- 📱 Responsive sur mobile, tablette et desktop
+- 🔗 Footer avec icônes de réseaux sociaux
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📁 Structure du projet
 
-### `npm run eject`
+bm-delivery/
+├── public/
+│ └── images/ # Images utilisées (avis clients, illustrations)
+├── src/
+│ ├── components/ # Composants réutilisables
+│ ├── pages/ # Pages principales
+│ ├── App.js # Composant principal
+│ ├── index.js # Point d’entrée React
+│ └── index.css # Feuille de style principale
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🚀 Lancer le projet en local
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone le dépôt :
+```bash
+git clone https://github.com/derouiche-aymen/bm-delivery.git
+cd bm-delivery
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Développé avec ❤️ par Aymen Derouiche
 
-### Code Splitting
+📧 Email : drouiche.aymen@gmail.com
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+📸 github : @derouiche-aymen

@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
-const NavBar = () => {
-  const [activeButton, setActiveButton] = useState('home');
-
+const NavBar = ({ isDarkMode, setIsDarkMode }) => {
+  const [activeButton, setActiveButton] = useState('home')
   return (
     <nav className="navbar navbar-expand-lg bg-white shadow-sm py-2 sticky-top">
       <div className="container">
@@ -21,8 +20,7 @@ const NavBar = () => {
           data-bs-target="#navbarNav"
           aria-controls="navbarNav"
           aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+          aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
 
@@ -32,35 +30,57 @@ const NavBar = () => {
             <li className="nav-item">
               <Link
                 to="/"
-                className={`nav-link px-3 ${activeButton === 'home' ? 'active text-primary border-bottom border-2 border-primary' : ''}`}
-                onClick={() => setActiveButton('home')}
-              >
+                className={`nav-link px-3 ${
+                  activeButton === 'home'
+                    ? 'active text-primary border-bottom border-2 border-primary'
+                    : ''
+                }`}
+                onClick={() => setActiveButton('home')}>
                 Accueil
               </Link>
             </li>
             <li className="nav-item">
               <Link
                 to="/a-propos"
-                className={`nav-link px-3 ${activeButton === 'about' ? 'active text-primary border-bottom border-2 border-primary' : ''}`}
-                onClick={() => setActiveButton('about')}
-              >
+                className={`nav-link px-3 ${
+                  activeButton === 'about'
+                    ? 'active text-primary border-bottom border-2 border-primary'
+                    : ''
+                }`}
+                onClick={() => setActiveButton('about')}>
                 À propos
               </Link>
             </li>
             <li className="nav-item">
               <Link
                 to="/contact"
-                className={`nav-link px-3 ${activeButton === 'contact' ? 'active text-primary border-bottom border-2 border-primary' : ''}`}
-                onClick={() => setActiveButton('contact')}
-              >
+                className={`nav-link px-3 ${
+                  activeButton === 'contact'
+                    ? 'active text-primary border-bottom border-2 border-primary'
+                    : ''
+                }`}
+                onClick={() => setActiveButton('contact')}>
                 Contact
               </Link>
             </li>
           </ul>
         </div>
+        <div className="form-check form-switch">
+          <input
+            className="form-check-input"
+            type="checkbox"
+            role="switch"
+            id="switchCheckChecked"
+            checked={isDarkMode}
+            onChange={() => setIsDarkMode(!isDarkMode)}
+          />
+          <label className="form-check-label" htmlFor="switchCheckChecked">
+            {isDarkMode ? '🌙' : '☀️'}
+          </label>
+        </div>
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default NavBar;
+export default NavBar

@@ -1,6 +1,7 @@
 import React from 'react'
 import GoogleMap from '../components/localisation'
 import Card from '../components/card'
+import Avis from '../components/avis'
 
 const About = () => {
   const cards = [
@@ -31,6 +32,7 @@ const About = () => {
           <Card key={index} photo={card.photo} description={card.description} />
         ))}
       </div>
+      <Avis />
     </div>
   )
 }

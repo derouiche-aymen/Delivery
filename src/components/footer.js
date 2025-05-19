@@ -25,9 +25,9 @@ const Footer = () => {
           <div className="col-md-4 mb-3">
             <h6>Suivez-nous</h6>
             <div className="d-flex gap-3">
-              <a href="#" className="text-light fs-5"><i className="bi bi-facebook"></i></a>
-              <a href="#" className="text-light fs-5"><i className="bi bi-instagram"></i></a>
-              <a href="#" className="text-light fs-5"><i className="bi bi-envelope"></i></a> {/* Icône email */}
+              <a href="https://www.facebook.com/" className="text-light fs-5" target="_blank"><i className="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com/" className="text-light fs-5" target="_blank" ><i className="bi bi-instagram"></i></a>
+              <a href="mailto:drouiche.aymen@gmail.com" className="text-light fs-5"  target="_blank"><i className="bi bi-envelope"></i></a> {/* Icône email */}
             </div>
           </div>
         </div>
